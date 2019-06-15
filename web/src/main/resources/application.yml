@@ -14,3 +14,18 @@ logging:
     com:
       zjy:
         daos: debug
+info:
+  app:
+    name: spring-boot-actuator
+    version: 1.0.0
+    test: test
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+#management.endpoints.web.base-path=/monitor
