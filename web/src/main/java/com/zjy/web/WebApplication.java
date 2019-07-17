@@ -3,8 +3,10 @@ package com.zjy.web;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.zjy"})
 @MapperScan("com.zjy.daos")
 public class WebApplication {
 
