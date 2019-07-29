@@ -28,6 +28,7 @@ public class IndexController {
     public String index() {
         Object aa = applicationContext.getBean("aa");
         Object bb = applicationContext.getBean("bb");
+        System.out.println("访问程序成功");
         PageHelper.startPage(1, 10);
         List<TestTableDto> all = testTableDao.getAll();
         PageInfo<TestTableDto> testTableDtos = new PageInfo<>(all);
