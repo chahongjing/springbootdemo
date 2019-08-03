@@ -1,5 +1,6 @@
 package com.zjy;
 
+import com.zjy.enums.WorkOrderType;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 @Primary
 public class WorkOrderBaseServiceImpl implements WorkOrderBaseService {
+
+    protected WorkOrderType workOrderType = WorkOrderType.DEFAULT;
     @Override
     public String myBaseMethod() {
-        String a = "base";
-        System.out.println(a);
-        return a;
+        System.out.println(workOrderType.getName());
+        return workOrderType.toString();
     }
 }

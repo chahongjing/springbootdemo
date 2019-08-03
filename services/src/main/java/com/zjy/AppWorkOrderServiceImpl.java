@@ -1,6 +1,9 @@
 package com.zjy;
 
+import com.zjy.enums.WorkOrderType;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.PostConstruct;
 
 /**
  * TODO
@@ -8,10 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class AppWorkOrderServiceImpl extends WorkOrderBaseServiceImpl implements AppWorkOrderService {
 
-    @Override
-    public String myBaseMethod() {
-        String a = "appworkorder";
-        System.out.println(a);
-        return a;
+    @PostConstruct
+    public void AfterSaleWorkOrderController() {
+        this.workOrderType = WorkOrderType.APP;
     }
 }

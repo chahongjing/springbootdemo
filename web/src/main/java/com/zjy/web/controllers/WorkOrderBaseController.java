@@ -1,6 +1,7 @@
 package com.zjy.web.controllers;
 
 import com.zjy.WorkOrderBaseService;
+import com.zjy.enums.WorkOrderType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,8 @@ public class WorkOrderBaseController {
 
     @Autowired
     protected WorkOrderBaseService workOrderService;
+
+    protected WorkOrderType workOrderType = WorkOrderType.DEFAULT;
 
     @GetMapping("test")
     public String test() {
