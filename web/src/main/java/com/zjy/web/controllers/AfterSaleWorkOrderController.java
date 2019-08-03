@@ -1,7 +1,6 @@
 package com.zjy.web.controllers;
 
 import com.zjy.AfterSaleWorkOrderService;
-import com.zjy.enums.WorkOrderType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +20,5 @@ public class AfterSaleWorkOrderController extends WorkOrderBaseController {
     @PostConstruct
     public void AfterSaleWorkOrderController() {
         this.workOrderService = afterSaleWorkOrderService;
-        this.workOrderType = WorkOrderType.AFTERSALE;
     }
 }

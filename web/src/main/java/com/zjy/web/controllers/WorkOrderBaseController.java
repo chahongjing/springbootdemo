@@ -21,7 +21,9 @@ public class WorkOrderBaseController {
     @Autowired
     protected WorkOrderBaseService workOrderService;
 
-    protected WorkOrderType workOrderType = WorkOrderType.DEFAULT;
+    protected WorkOrderType getWorkOrderType() {
+        return workOrderService.getWorkOrderType();
+    }
 
     @GetMapping("test")
     public String test() {
