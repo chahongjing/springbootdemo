@@ -1,9 +1,13 @@
 package com.zjy.web.controllers;
 
 import com.zjy.AppWorkOrderService;
+import com.zjy.WorkOrderBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.PostConstruct;
 
 /**
  * TODO
@@ -13,9 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AppWorkOrderController extends WorkOrderBaseController {
 
     @Autowired
-    protected AppWorkOrderService appWorkOrderService;
+    private AppWorkOrderService appWorkOrderService;
 
-    public String test() {
-        return workOrderBaseService.myBaseMethod();
+    @PostConstruct
+    public void AppWorkOrderController() {
+        this.workOrderService = appWorkOrderService;
     }
 }
