@@ -3,3 +3,4 @@
 2. webMVC
 3. mybatis + pagehelper
 4. swagger2
+5. thymeleaf
