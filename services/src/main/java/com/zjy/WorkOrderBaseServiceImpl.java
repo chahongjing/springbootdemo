@@ -11,15 +11,19 @@ import org.springframework.stereotype.Service;
 @Primary
 public class WorkOrderBaseServiceImpl implements WorkOrderBaseService {
 
-    protected WorkOrderType workOrderType = WorkOrderType.DEFAULT;
+    private WorkOrderType workOrderType = WorkOrderType.DEFAULT;
 
     public WorkOrderType getWorkOrderType() {
         return workOrderType;
     }
 
+    public void setWorkOrderType(WorkOrderType type) {
+        workOrderType = type;
+    }
+
     @Override
     public String myBaseMethod() {
-        System.out.println(workOrderType.getName());
+        System.out.println(getWorkOrderType().getName());
         return workOrderType.toString();
     }
 }

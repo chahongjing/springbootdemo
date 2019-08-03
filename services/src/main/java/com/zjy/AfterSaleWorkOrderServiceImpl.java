@@ -13,6 +13,6 @@ public class AfterSaleWorkOrderServiceImpl extends WorkOrderBaseServiceImpl impl
 
     @PostConstruct
     public void AfterSaleWorkOrderController() {
-        this.workOrderType = WorkOrderType.AFTERSALE;
+        setWorkOrderType(WorkOrderType.AFTERSALE);
     }
 }

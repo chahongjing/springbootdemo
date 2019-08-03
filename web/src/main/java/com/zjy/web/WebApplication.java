@@ -14,4 +14,7 @@ public class WebApplication {
         SpringApplication.run(WebApplication.class, args);
     }
 
+    // http://localhost:8080/workOrderBase/test
+    // http://localhost:8080/appWorkOrder/test
+    // http://localhost:8080/afterSaleWorkOrder/test
 }
