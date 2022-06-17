@@ -35,7 +35,7 @@
     <pagehelper>1.2.12</pagehelper>
     <swagger2>2.9.2</swagger2>
     <kafka>2.3.0</kafka>
-    <fastjson>1.2.58</fastjson>
+    <fastjson>1.2.83</fastjson>
   </properties>
 
   <dependencyManagement>
